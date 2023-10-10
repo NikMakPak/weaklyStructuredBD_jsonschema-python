@@ -1,0 +1,26 @@
+{
+    "inbox": [
+        {
+          "id": 1,
+          "from": ["john@example.com", "bob@example.com"],
+          "to": "jane@example.com",
+          "subject": "Hello",
+          "content": "How are you?",
+          "received_at": "2022-01-01T00:00:00Z"
+        }
+    ],
+
+    "accounts": [
+        {
+          "id": "1",
+          "username": "john",
+          "password": "password1"
+        }
+    ],
+
+    "address_book": [
+        {
+          "name": "John Doe"
+        }
+    ]
+}

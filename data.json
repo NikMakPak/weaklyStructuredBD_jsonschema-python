@@ -1,0 +1,65 @@
+{
+    "inbox": [
+        {
+          "id": 1,
+          "from": "john@example.com",
+          "to": "jane@example.com",
+          "subject": "Hello",
+          "content": "How are you?",
+          "received_at": "2022-01-01T00:00:00Z"
+        },
+        {
+          "id": 2,
+          "from": "jane@example.com",
+          "to": ["john@example.com", "bob@example.com"],
+          "subject": "Re: Hello",
+          "content": "I'm fine, thanks!",
+          "received_at": "2022-01-01T01:00:00Z"
+        },
+        {
+          "id": 3,
+          "from": "bob@example.com",
+          "to": "john@example.com",
+          "subject": "Meeting",
+          "content": "Let's meet tomorrow",
+          "received_at": "2022-01-01T02:00:00Z"
+        }
+    ],
+
+    "accounts": [
+        {
+          "id": 1,
+          "username": "john",
+          "password": "password1",
+          "mail_server": "mail.example.com"
+        },
+        {
+          "id": 2,
+          "username": "jane",
+          "password": "password2",
+          "mail_server": "mail.example.com"
+        },
+        {
+          "id": 3,
+          "username": "bob",
+          "password": "password3",
+          "mail_server": "mail.example.com"
+        }
+    ],
+
+    "address_book": [
+        {
+          "name": "John Doe",
+          "email": "john@example.com"
+        },
+        {
+          "name": "Jane Doe",
+          "email": "jane@example.com"
+        },
+        {
+          "name": "Bob Smith",
+          "email": "bob@example.com"
+        }
+    ]
+      
+}
