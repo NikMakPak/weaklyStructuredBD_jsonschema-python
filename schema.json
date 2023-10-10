@@ -11,13 +11,35 @@
               "type": "integer"
             },
             "from": {
-              "type": "string"
+                "type": "string",
+                "pattern": "^\\S+@\\S+\\.\\S+$",
+                "format": "email",
+                "minLength": 6,
+                "maxLength": 127
             },
             "to": {
-              "type": ["string", "array"],
-              "items": {
-                "type": "string"
-              }
+                "oneOf": [
+                    {"type": "array", 
+                        "items": {
+                        "type": "string",
+                        "pattern": "^\\S+@\\S+\\.\\S+$",
+                        "format": "email",
+                        "minLength": 6,
+                        "maxLength": 127
+                      }
+                    },
+                    {"type": "string", "pattern": "^\\S+@\\S+\\.\\S+$",
+                    "format": "email",
+                    "minLength": 6,
+                    "maxLength": 127
+                    }
+                ],
+               
+               "items": {
+                 "type": "string",
+                 "pattern": "^\\S+@\\S+\\.\\S+$",
+                 "format": "email"
+               }
             },
             "subject": {
               "type": "string"
@@ -30,6 +52,7 @@
               "format": "date-time"
             }
           },
+          "additionalProperties": false,
           "required": ["id", "from", "to", "subject", "content", "received_at"]
         }
       },
@@ -42,15 +65,19 @@
               "type": "integer"
             },
             "username": {
-              "type": "string"
+              "type": "string",
+              "minLength": 3
             },
             "password": {
-              "type": "string"
+              "type": "string",
+              "minLength": 5
             },
             "mail_server": {
-              "type": "string"
+              "type": "string",
+              "format": "uri"
             }
           },
+          "additionalProperties": false,
           "required": ["id", "username", "password", "mail_server"]
         }
       },
@@ -63,7 +90,8 @@
               "type": "string"
             },
             "email": {
-              "type": "string"
+              "type": "string",
+              "format": "email"
             }
           },
           "required": ["name", "email"]

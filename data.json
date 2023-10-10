@@ -3,7 +3,7 @@
         {
           "id": 1,
           "from": "john@example.com",
-          "to": "jane@example.com",
+          "to": "hyygkjgjg",
           "subject": "Hello",
           "content": "How are you?",
           "received_at": "2022-01-01T00:00:00Z"
@@ -30,7 +30,7 @@
         {
           "id": 1,
           "username": "john",
-          "password": "password1",
+          "password": "pwds1",
           "mail_server": "mail.example.com"
         },
         {
