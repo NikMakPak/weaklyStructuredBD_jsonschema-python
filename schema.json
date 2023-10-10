@@ -1,0 +1,74 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "inbox": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "from": {
+              "type": "string"
+            },
+            "to": {
+              "type": ["string", "array"],
+              "items": {
+                "type": "string"
+              }
+            },
+            "subject": {
+              "type": "string"
+            },
+            "content": {
+              "type": "string"
+            },
+            "received_at": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          "required": ["id", "from", "to", "subject", "content", "received_at"]
+        }
+      },
+      "accounts": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "username": {
+              "type": "string"
+            },
+            "password": {
+              "type": "string"
+            },
+            "mail_server": {
+              "type": "string"
+            }
+          },
+          "required": ["id", "username", "password", "mail_server"]
+        }
+      },
+      "address_book": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            }
+          },
+          "required": ["name", "email"]
+        }
+      }
+    },
+    "required": ["inbox", "accounts", "address_book"]
+  }
